@@ -374,7 +374,7 @@ with tab3:
         cols_d = ["id_lote","explosivo","tipo","gravedad","esperado","encontrado","accion"]
         disc_filtrada = disc_show[cols_d] if all(c in disc_show.columns for c in cols_d) else disc_show
         st.dataframe(
-            disc_filtrada.style.applymap(colorear, subset=["gravedad"]),
+            disc_filtrada.style.map(colorear, subset=["gravedad"]),
             use_container_width=True,
             hide_index=True
         )
